@@ -1,0 +1,25 @@
+﻿{
+  "defaultSolutionDirectory": "./../",
+  "defaultSolutionFilePath": "./../reSharePoint.sln",
+
+  "defaultDocsBuildEnabled": false,
+
+  "defaultNuGetPackagesDirectory": "./build-artifact-nuget-packages",
+  "defaultChocolateyPackagesDirectory": "./build-artifact-cli-packages",
+  "defaultNuspecVersion": "0.1.0",
+
+  "defaultTestCategories": [
+    "CI.Core"
+  ],
+  "customNuspecs": [
+    
+  ],
+  "customChocolateySpecs": [
+
+  ],
+  "defaultTestAssemblyPaths": [
+
+  ],
+  "defaultBuildDirs": [ ],
+  "defaultEnvironmentVariables": [ ]
+}
