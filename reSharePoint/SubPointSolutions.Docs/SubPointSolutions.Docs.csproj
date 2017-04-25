@@ -1,0 +1,1230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4CAA07E-38A2-42AA-A8F3-164C5551E7A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SubPointSolutions.Docs</RootNamespace>
+    <AssemblyName>SubPointSolutions.Docs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.BusinessData, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.BusinessData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.1.1\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.1.1.1\lib\net45\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.Workspaces.1.1.1\lib\net45\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.VisualBasic.1.1.1\lib\net45\Microsoft.CodeAnalysis.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic.Workspaces, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.VisualBasic.Workspaces.1.1.1\lib\net45\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.1.1\lib\net45\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces.Desktop, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.1.1\lib\net45\Microsoft.CodeAnalysis.Workspaces.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.WindowsTokenService, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.IdentityModel.WindowsTokenService.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.SecureStoreService, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.SecureStoreService.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.Search.Applications, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.Search.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.Search.Connector, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.Search.Connector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.Search.ExchangeAdapter, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.Search.ExchangeAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.ServerRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Linq, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Portal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Search.Extended.Administration, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Search.Extended.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Search.Extended.Administration.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Search.Extended.Administration.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Search.Extended.Administration.ResourceStorage, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Search.Extended.Administration.ResourceStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Taxonomy.Intl, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Taxonomy.Intl.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.sharepoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\microsoft.sharepoint.WorkflowActions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowServicesBase, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.WorkflowServicesBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkManagement.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.WorkManagement.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="SubPointSolutions.DocsBuildTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SubPointSolutions.DocsBuildTools.0.1.0-alpha171160233\lib\net45\SubPointSolutions.DocsBuildTools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SubPointSolutions.DocsBuildTools.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SubPointSolutions.DocsBuildTools.Data.0.1.0-alpha171160233\lib\net45\SubPointSolutions.DocsBuildTools.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.AttributedModel, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.Convention, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Convention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.Hosting, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Hosting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.Runtime, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.TypedParts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Metadata, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.1.0\lib\dotnet5.2\System.Reflection.Metadata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\DocTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\AvoidSPObjectNameStringComparison.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\AvoidUsingSPListItemFile.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\DoNotSuppressExceptions.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\DoNotUseEntityEditorEntities.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\DoNotUseSPContentTypeFieldsToAddOrDelete.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\DoNotUseSPContextObjectInDisposedBlock.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\DoNotUseUnsafeTypeConversionOnSPListItem.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\InappropriateUsageOfSPListCollection.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\OutOfContextRWEP.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\PutSPFileExistsIntoTryCatchBlock.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\SendMailFromWcfService.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\SPDataSourceScopeDoesNotDefined.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\SpecifySPZoneInSPSite.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\SPQueryScopeDoesNotDefined.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\SPViewScopeDoesNotDefined.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\UnsafeCastingInItemReceiver.cs" />
+    <Compile Include="Views\ReSP\Inspections\csharp\WrongSPViewUpdate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="fonts\Default\fontawesome-webfont.eot" />
+    <None Include="fonts\Default\fontawesome-webfont.ttf" />
+    <None Include="fonts\Default\fontawesome-webfont.woff" />
+    <None Include="fonts\Default\fontawesome-webfont.woff2" />
+    <None Include="fonts\Default\FontAwesome.otf" />
+    <None Include="fonts\Default\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\Default\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\Default\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\Default\glyphicons-halflings-regular.woff2" />
+    <None Include="packages.config" />
+    <None Include="Scripts\Default\jquery-1.9.1.min.map" />
+    <None Include="Views\index.md" />
+    <None Include="Views\ReSP\code-completion\CommandUIDefinitionLocation.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\ContentPlaceHolderId.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\ContentTypeBindingContentTypeId.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\ContentTypeBindingListUrl.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\ContentTypeGroup.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\ControlSrc.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\CustomActionLocation.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\CustomActionRegistrationId.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\CustomActionRegistrationType.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\CustomActionRights.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\FeatureSiteTemplateAssociationFeatureId.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\FeatureSiteTemplateAssociationTemplateName.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\FieldGroup.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\FieldLookupList.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\FieldRef.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\FieldType.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\FileContentType.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\FilePublishingAssociatedContentType.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\FilePublishingPageLayout.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\Index.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\ListInstanceFeatureId.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\ListInstanceTemplateType.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\SPItemEventProperties.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\SPWebCollectionAdd.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\UseBuiltInFieldsInsteadOfStrings.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\UserProfilePropertyName.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\WebPartGroup.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\code-completion\WebPartZoneTitle.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\ReSP\getting-started\FAQ.md" />
+    <None Include="Views\ReSP\getting-started\Index.md" />
+    <None Include="Views\ReSP\getting-started\License.md" />
+    <None Include="Views\ReSP\getting-started\Releases.md" />
+    <None Include="Views\ReSP\getting-started\_Basics.md" />
+    <None Include="Views\ReSP\getting-started\_Inspections.md" />
+    <None Include="Views\ReSP\getting-started\_Installing reSP.md" />
+    <None Include="Views\ReSP\getting-started\_Known issues.md" />
+    <None Include="Views\ReSP\getting-started\_Pro.md" />
+    <None Include="Views\ReSP\getting-started\_Support.md" />
+    <None Include="Views\ReSP\getting-started\_Updating reSP.md" />
+    <None Include="Views\ReSP\Index.md" />
+    <None Include="Views\ReSP\Inspections\aspnet\FolderIndex.md" />
+    <None Include="Views\ReSP\Inspections\aspnet\SetAutoGenerateColumnsForSPGridViewInPage.md" />
+    <None Include="Views\ReSP\Inspections\aspnet\SPDataSourceScopeDoesNotDefinedInPage.md" />
+    <None Include="Views\ReSP\Inspections\aspnet\_samples\SPDataSourceScopeDoesNotDefinedInPage-CorrectSPDataSourceScope.sample-ref" />
+    <None Include="Views\ReSP\Inspections\aspnet\_samples\SPDataSourceScopeDoesNotDefinedInPage-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\AvoidDollarGlobalVariableInCode.md" />
+    <None Include="Views\ReSP\Inspections\csharp\AvoidEnumeratingAllUserProfiles.md" />
+    <None Include="Views\ReSP\Inspections\csharp\AvoidJQueryDocumentReadyInCode.md" />
+    <None Include="Views\ReSP\Inspections\csharp\AvoidSPObjectNameStringComparison.md" />
+    <None Include="Views\ReSP\Inspections\csharp\AvoidStaicSPObjectsInFields.md" />
+    <None Include="Views\ReSP\Inspections\csharp\AvoidUnsafeUrlConcatenations.md" />
+    <None Include="Views\ReSP\Inspections\csharp\AvoidUsingSPContextOutsideOfWebContext.md" />
+    <None Include="Views\ReSP\Inspections\csharp\AvoidUsingSPListItemFile.md" />
+    <None Include="Views\ReSP\Inspections\csharp\ConfigurationManagerShouldNotBeUsed.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotChangeSPPersistedObject.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotGetUtcTimeFromDateTime.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotSuppressExceptions.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotUseDirectorySearcher.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotUseEntityEditorEntities.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotUsePortalLog.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotUseSPContentTypeFieldsToAddOrDelete.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotUseSPContextObjectInDisposedBlock.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotUseSPWebProperties.md" />
+    <None Include="Views\ReSP\Inspections\csharp\DoNotUseUnsafeTypeConversionOnSPListItem.md" />
+    <None Include="Views\ReSP\Inspections\csharp\FolderIndex.md" />
+    <None Include="Views\ReSP\Inspections\csharp\GetPublishingPagesNoParams.md" />
+    <None Include="Views\ReSP\Inspections\csharp\InappropriateUsageOfSPListCollection.md" />
+    <None Include="Views\ReSP\Inspections\csharp\InappropriateUsageOfTaxonomyGroupCollection.md" />
+    <None Include="Views\ReSP\Inspections\csharp\MagicStringShouldNotBeUsed.md" />
+    <None Include="Views\ReSP\Inspections\csharp\NoCustomLogging.md" />
+    <None Include="Views\ReSP\Inspections\csharp\OutOfContextRWEP.md" />
+    <None Include="Views\ReSP\Inspections\csharp\OutOfContextSPWebPartManager.md" />
+    <None Include="Views\ReSP\Inspections\csharp\ProcessingIdParameterForAddWorkItemShouldBeEmpty.md" />
+    <None Include="Views\ReSP\Inspections\csharp\PutSPFileExistsIntoTryCatchBlock.md" />
+    <None Include="Views\ReSP\Inspections\csharp\SendMailFromWcfService.md" />
+    <None Include="Views\ReSP\Inspections\csharp\SPDataSourceScopeDoesNotDefined.md" />
+    <None Include="Views\ReSP\Inspections\csharp\SpecifySPZoneInSPSite.md" />
+    <None Include="Views\ReSP\Inspections\csharp\SPMonitoredScopeShouldBeUsed.md" />
+    <None Include="Views\ReSP\Inspections\csharp\SPQueryScopeDoesNotDefined.md" />
+    <None Include="Views\ReSP\Inspections\csharp\SPSiteFeatureShouldNotBeActivatedFromCode.md" />
+    <None Include="Views\ReSP\Inspections\csharp\SPViewScopeDoesNotDefined.md" />
+    <None Include="Views\ReSP\Inspections\csharp\ThreadSleepShouldNotBeUsed.md" />
+    <None Include="Views\ReSP\Inspections\csharp\ULSLoggingInCatchBlock.md" />
+    <None Include="Views\ReSP\Inspections\csharp\UnsafeCastingInItemReceiver.md" />
+    <None Include="Views\ReSP\Inspections\csharp\UseBuiltInFeatureInsteadOfStrings.md" />
+    <None Include="Views\ReSP\Inspections\csharp\UseBuiltInFieldInsteadOfStrings.md" />
+    <None Include="Views\ReSP\Inspections\csharp\UseBuiltInPublishingFieldInsteadOfStrings.md" />
+    <None Include="Views\ReSP\Inspections\csharp\UseBuiltInUserProfilePropertyContantInsteadOfStrings.md" />
+    <None Include="Views\ReSP\Inspections\csharp\UseSecureStoreService.md" />
+    <None Include="Views\ReSP\Inspections\csharp\WrongSPViewUpdate.md" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidJQueryDocumentReadyInCode-AvoidJQueryDocumentReadyInCode_Init.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidJQueryDocumentReadyInCode-AvoidJQueryDocumentReadyInCode_mQuery.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidJQueryDocumentReadyInCode-AvoidJQueryDocumentReadyInCode_mQuerySODExecute.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidJQueryDocumentReadyInCode-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidSPObjectNameStringComparison-AvoidSPObjectNameStringComparisonClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidSPObjectNameStringComparison-CodeAvoidSPObjectNameStringComparison.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidSPObjectNameStringComparison-InappropriateComparison.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidSPObjectNameStringComparison-ReSharePointDocsBasicInspectionCodeAvoidSPObjectNameStringComparison.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidSPObjectNameStringComparison-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidUsingSPListItemFile-AppropriateSPListItemSPFileUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidUsingSPListItemFile-AvoidUsingSPListItemFileClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidUsingSPListItemFile-CodeAvoidUsingSPListItemFile.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidUsingSPListItemFile-ReSharePointDocsBasicInspectionCodeAvoidUsingSPListItemFile.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\AvoidUsingSPListItemFile-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-ArgumentNotSpecifiedExceptionClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-CalledMethod.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-CallerMethod.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-csharpArgumentNotSpecifiedException.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-csharpDAL.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-csharpDoNotSuppressExceptions.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-csharpWrappedException.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-DALClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-DoNotSuppressExceptionsClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-Save.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-SubPointSolutionsDocsViewsViewsReSPInspectionscsharpArgumentNotSpecifiedException.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-SubPointSolutionsDocsViewsViewsReSPInspectionscsharpDAL.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-SubPointSolutionsDocsViewsViewsReSPInspectionscsharpDoNotSuppressExceptions.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-SubPointSolutionsDocsViewsViewsReSPInspectionscsharpWrappedException.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotSuppressExceptions-WrappedExceptionClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseEntityEditorEntities-csharpDoNotUseEntityEditorEntities.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseEntityEditorEntities-DoNotUseEntityEditorEntitiesClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseEntityEditorEntities-GetPeoplePickerUser.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseEntityEditorEntities-SubPointSolutionsDocsViewsViewsReSPInspectionscsharpDoNotUseEntityEditorEntities.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseEntityEditorEntities-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContentTypeFieldsToAddOrDelete-AppropriateAddingFields.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContentTypeFieldsToAddOrDelete-AppropriateDeletingFields.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContentTypeFieldsToAddOrDelete-CodeDoNotUseSPContentTypeFieldsToAddOrDelete.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContentTypeFieldsToAddOrDelete-DoNotUseSPContentTypeFieldsToAddOrDeleteClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContentTypeFieldsToAddOrDelete-InappropriateSPContentTypeFieldsUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContentTypeFieldsToAddOrDelete-ReSharePointDocsBasicInspectionCodeDoNotUseSPContentTypeFieldsToAddOrDelete.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContentTypeFieldsToAddOrDelete-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContextObjectInDisposedBlock-CorrectSPContextUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContextObjectInDisposedBlock-csharpDoNotUseSPContextObjectInDisposedBlock.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContextObjectInDisposedBlock-DoNotUseSPContextObjectInDisposedBlockClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContextObjectInDisposedBlock-InapropriateSPContextUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContextObjectInDisposedBlock-SubPointSolutionsDocsViewsReSPInspectionscsharpDoNotUseSPContextObjectInDisposedBlock.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseSPContextObjectInDisposedBlock-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseUnsafeTypeConversionOnSPListItem-CodeDoNotUseUnsafeTypeConversionOnSPListItem.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseUnsafeTypeConversionOnSPListItem-CorrectSPListItemCast.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseUnsafeTypeConversionOnSPListItem-DoNotUseUnsafeTypeConversionOnSPListItemClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseUnsafeTypeConversionOnSPListItem-IncorrectSPListItemCast.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseUnsafeTypeConversionOnSPListItem-ReSharePointDocsBasicInspectionCodeDoNotUseUnsafeTypeConversionOnSPListItem.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\DoNotUseUnsafeTypeConversionOnSPListItem-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\InappropriateUsageOfSPListCollection-CodeInappropriateUsageOfSPListCollection.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\InappropriateUsageOfSPListCollection-CorrectListUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\InappropriateUsageOfSPListCollection-InappropriateUsageOfSPListCollectionClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\InappropriateUsageOfSPListCollection-ReSharePointDocsBasicInspectionCodeInappropriateUsageOfSPListCollection.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\InappropriateUsageOfSPListCollection-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\OutOfContextRWEP-CodeOutOfContextRWEP.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\OutOfContextRWEP-OutOfContextRWEPClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\OutOfContextRWEP-ReSharePointDocsBasicInspectionCodeOutOfContextRWEP.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\OutOfContextRWEP-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\OutOfContextRWEP-TrustedConnectionSample.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\PutSPFileExistsIntoTryCatchBlock-CodePutSPFileExistsIntoTryCatchBlock.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\PutSPFileExistsIntoTryCatchBlock-CorrectSPFileExistsUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\PutSPFileExistsIntoTryCatchBlock-PutSPFileExistsIntoTryCatchBlockClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\PutSPFileExistsIntoTryCatchBlock-ReSharePointDocsBasicInspectionCodePutSPFileExistsIntoTryCatchBlock.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\PutSPFileExistsIntoTryCatchBlock-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SendMailFromWcfService-CodeSendMailFromWcfService.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SendMailFromWcfService-CorrectSendMailFromWcfServiceUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SendMailFromWcfService-ReSharePointDocsBasicInspectionCodeSendMailFromWcfService.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SendMailFromWcfService-SendMailFromWcfServiceClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SendMailFromWcfService-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPDataSourceScopeDoesNotDefined-CodeSPDataSourceScopeDoesNotDefined.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPDataSourceScopeDoesNotDefined-ReSharePointDocsBasicInspectionCodeSPDataSourceScopeDoesNotDefined.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPDataSourceScopeDoesNotDefined-SPDataSourceScopeDoesNotDefinedClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPDataSourceScopeDoesNotDefined-SPDataSourceScopeUsageSamples.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPDataSourceScopeDoesNotDefined-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SpecifySPZoneInSPSite-CodeSpecifySPZoneInSPSite.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SpecifySPZoneInSPSite-CorrectSPUrlZoneParamUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SpecifySPZoneInSPSite-IncorrectSPUrlZoneParamUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SpecifySPZoneInSPSite-ReSharePointDocsBasicInspectionCodeSpecifySPZoneInSPSite.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SpecifySPZoneInSPSite-SpecifySPZoneInSPSiteClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SpecifySPZoneInSPSite-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPQueryScopeDoesNotDefined-CodeSPQueryScopeDoesNotDefined.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPQueryScopeDoesNotDefined-ReSharePointDocsBasicInspectionCodeSPQueryScopeDoesNotDefined.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPQueryScopeDoesNotDefined-SPQueryScopeDoesNotDefinedClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPQueryScopeDoesNotDefined-SPQueryScopeUsageSamples.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPQueryScopeDoesNotDefined-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPViewScopeDoesNotDefined-CodeSPViewScopeDoesNotDefined.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPViewScopeDoesNotDefined-CorrectSPViewScopeUsage.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPViewScopeDoesNotDefined-ReSharePointDocsBasicInspectionCodeSPViewScopeDoesNotDefined.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPViewScopeDoesNotDefined-SPViewScopeDoesNotDefinedClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\SPViewScopeDoesNotDefined-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\UnsafeCastingInItemReceiver-CodeUnsafeCastingInItemReceiver.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\UnsafeCastingInItemReceiver-ReSharePointDocsBasicInspectionCodeUnsafeCastingInItemReceiver.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\UnsafeCastingInItemReceiver-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\UnsafeCastingInItemReceiver-UnsafeCastingInItemReceiverClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\UnsafeCastingInItemReceiver-UnsafeCastOnSPItemEventDataCollectionItem.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\WrongSPViewUpdate-CodeWrongSPViewUpdate.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\WrongSPViewUpdate-CorrectSPViewUpdate.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\WrongSPViewUpdate-IncorrectSPViewUpdate.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\WrongSPViewUpdate-ReSharePointDocsBasicInspectionCodeWrongSPViewUpdate.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\WrongSPViewUpdate-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\csharp\_samples\WrongSPViewUpdate-WrongSPViewUpdateClass.sample-ref" />
+    <None Include="Views\ReSP\Inspections\Index.md" />
+    <None Include="Views\ReSP\Inspections\javascript\AvoidDollarGlobalVariableInControl.md" />
+    <None Include="Views\ReSP\Inspections\javascript\AvoidDollarGlobalVariableInJSFile.md" />
+    <None Include="Views\ReSP\Inspections\javascript\AvoidDollarGlobalVariableInMasterPage.md" />
+    <None Include="Views\ReSP\Inspections\javascript\AvoidDollarGlobalVariableInPage.md" />
+    <None Include="Views\ReSP\Inspections\javascript\AvoidJQueryDocumentReadyInControl.md" />
+    <None Include="Views\ReSP\Inspections\javascript\AvoidJQueryDocumentReadyInJSFile.md" />
+    <None Include="Views\ReSP\Inspections\javascript\AvoidJQueryDocumentReadyInMasterPage.md" />
+    <None Include="Views\ReSP\Inspections\javascript\AvoidJQueryDocumentReadyInPage.md" />
+    <None Include="Views\ReSP\Inspections\javascript\FolderIndex.md" />
+    <None Include="Views\ReSP\Inspections\javascript\_samples\AvoidJQueryDocumentReady-AvoidJQueryDocumentReadyInControl_Init.sample-ref" />
+    <None Include="Views\ReSP\Inspections\javascript\_samples\AvoidJQueryDocumentReady-AvoidJQueryDocumentReadyInControl_mQuery.sample-ref" />
+    <None Include="Views\ReSP\Inspections\javascript\_samples\AvoidJQueryDocumentReady-AvoidJQueryDocumentReadyInControl_mQuerySODExecute.sample-ref" />
+    <None Include="Views\ReSP\Inspections\javascript\_samples\AvoidJQueryDocumentReady-AvoidJQueryDocumentReadyInJSFile_mQuerySODExecute.sample-ref" />
+    <None Include="Views\ReSP\Inspections\javascript\_samples\AvoidJQueryDocumentReady-AvoidJQueryDocumentReadyInMasterPage_mQuerySODExecute.sample-ref" />
+    <None Include="Views\ReSP\Inspections\javascript\_samples\AvoidJQueryDocumentReady-AvoidJQueryDocumentReadyInPage_mQuerySODExecute.sample-ref" />
+    <None Include="Views\ReSP\Inspections\javascript\_samples\AvoidJQueryDocumentReady-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\javascript\_samples\AvoidJQueryDocumentReadyInControl-Init.sample-ref" />
+    <None Include="Views\ReSP\Inspections\javascript\_samples\AvoidJQueryDocumentReadyInControl-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\AvoidCommentsForContentType.md" />
+    <None Include="Views\ReSP\Inspections\xml\AvoidListContentTypes.md" />
+    <None Include="Views\ReSP\Inspections\xml\ConsiderHiddenListTemplates.md" />
+    <None Include="Views\ReSP\Inspections\xml\ConsiderOverwriteAttributeForContentType.md" />
+    <None Include="Views\ReSP\Inspections\xml\ConsiderOverwriteAttributeForField.md" />
+    <None Include="Views\ReSP\Inspections\xml\DeclareEmptyFieldsElement.md" />
+    <None Include="Views\ReSP\Inspections\xml\DeployContentTypesCorrectly.md" />
+    <None Include="Views\ReSP\Inspections\xml\DeployFieldsCorrectly.md" />
+    <None Include="Views\ReSP\Inspections\xml\DeployTaxonomyFieldsCorrectly.md" />
+    <None Include="Views\ReSP\Inspections\xml\DifferentInternalAndStaticFieldNames.md" />
+    <None Include="Views\ReSP\Inspections\xml\DoNotAllowDeletionForField.md" />
+    <None Include="Views\ReSP\Inspections\xml\DoNotAllowDeletionForList.md" />
+    <None Include="Views\ReSP\Inspections\xml\DoNotDefineMultipleContentTypeGroupInOneElementFile.md" />
+    <None Include="Views\ReSP\Inspections\xml\DoNotDefineMultipleFieldGroupInOneElementFile.md" />
+    <None Include="Views\ReSP\Inspections\xml\DoNotDeployTaxonomyFieldsInListDefinition.md" />
+    <None Include="Views\ReSP\Inspections\xml\DoNotIndexNoteField.md" />
+    <None Include="Views\ReSP\Inspections\xml\DoNotProvisionLookupFieldBeforeRelatedList.md" />
+    <None Include="Views\ReSP\Inspections\xml\DoNotUseSystemListNames.md" />
+    <None Include="Views\ReSP\Inspections\xml\DoNotUseUnderscoreInFieldName.md" />
+    <None Include="Views\ReSP\Inspections\xml\EnsureFolderContentTypeInListDefinition.md" />
+    <None Include="Views\ReSP\Inspections\xml\FieldIdShouldBeUppercase.md" />
+    <None Include="Views\ReSP\Inspections\xml\FieldNameLengthLimitExceed.md" />
+    <None Include="Views\ReSP\Inspections\xml\FolderIndex.md" />
+    <None Include="Views\ReSP\Inspections\xml\MixedIDInFieldName.md" />
+    <None Include="Views\ReSP\Inspections\xml\NameWithPictureForUserField.md" />
+    <None Include="Views\ReSP\Inspections\xml\NotProvisionedEntity.md" />
+    <None Include="Views\ReSP\Inspections\xml\RepeatCalculatedFieldsInListSchema.md" />
+    <None Include="Views\ReSP\Inspections\xml\RepeatLookupFieldsInListSchema.md" />
+    <None Include="Views\ReSP\Inspections\xml\UniqueFieldName.md" />
+    <None Include="Views\ReSP\Inspections\xml\UniqueFieldStaticName.md" />
+    <None Include="Views\ReSP\Inspections\xml\UniqueListInstanceTitle.md" />
+    <None Include="Views\ReSP\Inspections\xml\UniqueListInstanceUrl.md" />
+    <None Include="Views\ReSP\Inspections\xml\WebPartDefinitionMightBeImproved.md" />
+    <None Include="Views\ReSP\Inspections\xml\WebPartModuleDefinitionMightbeImproved.md" />
+    <None Include="Views\ReSP\Inspections\xml\WrongFeatureIdInListInstance.md" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\AvoidCommentsForContentType-CorrectContentTypeWithComments.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\AvoidCommentsForContentType-IncorrectContentTypeWithComments.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\AvoidCommentsForContentType-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\AvoidListContentTypes-CorrectContentTypesInList.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\AvoidListContentTypes-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\DeclareEmptyFieldsElement-DeclareEmptyFields.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\DeclareEmptyFieldsElement-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\DoNotIndexNoteField-CorrectNoteFieldXml.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\DoNotIndexNoteField-IncorrectNoteFieldXml.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\DoNotIndexNoteField-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\MixedIDInFieldName-IncorrectSample.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\MixedIDInFieldName-SysAll.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\WebPartDefinitionMightBeImproved-IncorrectNoteFieldXml.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\WebPartDefinitionMightBeImproved-IncorrectSample.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\WebPartDefinitionMightBeImproved-IncorrectWebPartDefinitionSample.sample-ref" />
+    <None Include="Views\ReSP\Inspections\xml\_samples\WebPartDefinitionMightBeImproved-SysAll.sample-ref" />
+    <None Include="Views\ReSP\kb\_Index.md" />
+    <None Include="Views\ReSP\live-templates\Index.md" />
+    <None Include="Views\ReSP\live-templates\nsite.md" />
+    <None Include="Views\ReSP\live-templates\nsw.md" />
+    <None Include="Views\ReSP\live-templates\nweb.md" />
+    <None Include="Views\ReSP\live-templates\rwep.md" />
+    <None Include="Views\ReSP\_ViewStart.cshtml" />
+    <None Include="Views\Shared\Default\Components\_Footer.cshtml" />
+    <None Include="Views\Shared\Default\Components\_LandingProjectsList.cshtml" />
+    <None Include="Views\Shared\Default\Components\_LastTenBlogPosts.cshtml" />
+    <None Include="Views\Shared\Default\Components\_PrevNextNavigation.cshtml" />
+    <None Include="Views\Shared\Default\Components\_SampleList.cshtml" />
+    <None Include="Views\Shared\Default\Components\_SampleListCategory.cshtml" />
+    <None Include="Views\Shared\Default\Components\_SecondNavigation.cshtml" />
+    <None Include="Views\Shared\Default\Components\_Sidebar.cshtml" />
+    <None Include="Views\Shared\Default\Components\_SidebarBlog.cshtml" />
+    <None Include="Views\Shared\Default\Components\_TopNavigation.cshtml" />
+    <None Include="Views\Shared\Default\Layouts\_Flued28.cshtml" />
+    <None Include="Views\Shared\Default\Layouts\_Flued28Blog.cshtml" />
+    <None Include="Views\Shared\Default\Layouts\_Flued37.cshtml" />
+    <None Include="Views\Shared\Default\Layouts\_Master.cshtml" />
+    <None Include="Views\Shared\Default\PageLayouts\_ContentPage.cshtml" />
+    <None Include="Views\Shared\Default\PageLayouts\_LandingPage.cshtml" />
+    <None Include="Views\Shared\Default\PageLayouts\_LandingPageBlog.cshtml" />
+    <None Include="Views\Shared\Default\PageLayouts\_M2Definition.cshtml" />
+    <None Include="Views\Shared\Default\PageLayouts\_M2Samples.cshtml" />
+    <None Include="Views\Shared\Default\Sections\_Clients.cshtml" />
+    <None Include="Views\Shared\Default\Sections\_ClientsLine.cshtml" />
+    <None Include="Views\Shared\Default\Sections\_ClientsOne.cshtml" />
+    <None Include="Views\Shared\Default\Sections\_ClientsStat.cshtml" />
+    <None Include="Views\Shared\Default\Sections\_FollowUs.cshtml" />
+    <None Include="Views\Shared\Default\Sections\_LandingHero.cshtml" />
+    <None Include="Views\Shared\Default\Sections\_M2Ecosystem.cshtml" />
+    <None Include="Views\Shared\Default\Sections\_Products.cshtml" />
+    <None Include="Views\Shared\Default\Sections\_Testimonials.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
+    <None Include="_site.wyam" />
+    <None Include="_start-site.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Default\bootstrap.min.css" />
+    <Content Include="Content\Default\colors\blue.css" />
+    <Content Include="Content\Default\colors\green.css" />
+    <Content Include="Content\Default\colors\grey.css" />
+    <Content Include="Content\Default\colors\midnight-blue.css" />
+    <Content Include="Content\Default\colors\orange.css" />
+    <Content Include="Content\Default\colors\purple.css" />
+    <Content Include="Content\Default\colors\red.css" />
+    <Content Include="Content\Default\colors\yellow.css" />
+    <Content Include="Content\Default\icons\icons.min.css" />
+    <Content Include="Content\Default\img\favicon\favicon.ico" />
+    <Content Include="Content\Default\img\landing-background.jpg" />
+    <Content Include="Content\Default\img\logo\alberta.ca - logo.svg" />
+    <Content Include="Content\Default\img\logo\antaressolutions.com.au - logo.gif" />
+    <Content Include="Content\Default\img\logo\arvosys.ru - logo.png" />
+    <Content Include="Content\Default\img\logo\atos.net - logo.png" />
+    <Content Include="Content\Default\img\logo\avanade.com - logo.png" />
+    <Content Include="Content\Default\img\logo\bool.se - logo.png" />
+    <Content Include="Content\Default\img\logo\cibpoint.ru - logo.png" />
+    <Content Include="Content\Default\img\logo\dclboston.com - logo.png" />
+    <Content Include="Content\Default\img\logo\delegate.dk - logo.svg" />
+    <Content Include="Content\Default\img\logo\gob.de - logo.jpg" />
+    <Content Include="Content\Default\img\logo\greenatom.ru - logo.png" />
+    <Content Include="Content\Default\img\logo\health.nsw.gov.au - logo.png" />
+    <Content Include="Content\Default\img\logo\heluxsystems.com - logo.png" />
+    <Content Include="Content\Default\img\logo\humanservices.gov.au - logo-2.png" />
+    <Content Include="Content\Default\img\logo\humanservices.gov.au - logo.png" />
+    <Content Include="Content\Default\img\logo\ignia.com.au - logo.png" />
+    <Content Include="Content\Default\img\logo\isolutions.ch - logo.png" />
+    <Content Include="Content\Default\img\logo\itransition.com - logo.svg" />
+    <Content Include="Content\Default\img\logo\kaspersky.com - logo.png" />
+    <Content Include="Content\Default\img\logo\kloud.com.au - logo.png" />
+    <Content Include="Content\Default\img\logo\loqutus.be - logo.png" />
+    <Content Include="Content\Default\img\logo\mwhglobal.com - logo.png" />
+    <Content Include="Content\Default\img\logo\nbnco.com.au - logo.png" />
+    <Content Include="Content\Default\img\logo\ndsas.de - logo.png" />
+    <Content Include="Content\Default\img\logo\netflower.de - logo.png" />
+    <Content Include="Content\Default\img\logo\nexplore.ch - logo.png" />
+    <Content Include="Content\Default\img\logo\ot.ru - logo.png" />
+    <Content Include="Content\Default\img\logo\philips.com - logo.svg" />
+    <Content Include="Content\Default\img\logo\plumsail.com - logo.png" />
+    <Content Include="Content\Default\img\logo\provokesolutions.com - logo.gif" />
+    <Content Include="Content\Default\img\logo\raona.com - icon.png" />
+    <Content Include="Content\Default\img\logo\rusal.com - logo.png" />
+    <Content Include="Content\Default\img\logo\smsmt.com - logo.png" />
+    <Content Include="Content\Default\img\logo\soprasteria.com - logo.png" />
+    <Content Include="Content\Default\img\logo\sparked.nl - logo.png" />
+    <Content Include="Content\Default\img\logo\storm.ie - logo.png" />
+    <Content Include="Content\Default\img\logo\towerswatson.com - logo.jpg" />
+    <Content Include="Content\Default\img\logo\tretton37.com - logo.png" />
+    <Content Include="Content\Default\img\logo\winvision.nl - logo.png" />
+    <Content Include="Content\Default\img\map\sydney-map.png" />
+    <Content Include="Content\Default\img\people\Anton-Khritonenkov.jpeg" />
+    <Content Include="Content\Default\img\people\Jasper-Siegmund.jpg" />
+    <Content Include="Content\Default\img\people\Marat-Bakirov.jpeg" />
+    <Content Include="Content\Default\img\people\patpen.jpg" />
+    <Content Include="Content\Default\img\people\Rene-Hezser.jpg" />
+    <Content Include="Content\Default\img\people\rolold.jpg" />
+    <Content Include="Content\Default\img\people\Ronny-Lewandowski.jpg" />
+    <Content Include="Content\Default\img\people\Serjic-Shkredov.jpg" />
+    <Content Include="Content\Default\img\products\metapack\metapack-gui-beta.png" />
+    <Content Include="Content\Default\img\products\metapack\metapack-vision.png" />
+    <Content Include="Content\Default\img\products\metastudio\MetaStudio-Beta1.png" />
+    <Content Include="Content\Default\img\products\metastudio\MetaStudio-Beta2.png" />
+    <Content Include="Content\Default\img\products\resp\resp.general-api.png" />
+    <Content Include="Content\Default\img\products\resp\resp.install.png" />
+    <Content Include="Content\Default\img\products\resp\resp.sharepoint-api.png" />
+    <Content Include="Content\Default\img\products\resp\resp.solution-check.png" />
+    <Content Include="Content\Default\img\products\resp\resp.suggestions.png" />
+    <Content Include="Content\Default\img\products\resp\resp.xml-api.png" />
+    <Content Include="Content\Default\img\subpoint-logo-25.png" />
+    <Content Include="Content\Default\responsive.css" />
+    <Content Include="Content\Default\sps.blog.css" />
+    <Content Include="Content\Default\sps.docs.css" />
+    <Content Include="Content\Default\sps.docs.new.css" />
+    <Content Include="Content\Default\sps.web.css" />
+    <Content Include="Content\Default\style.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shCore.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shCoreDjango.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shCoreEclipse.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shCoreEmacs.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shCoreFadeToGrey.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shCoreMDUltra.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shCoreMidnight.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shCoreRDark.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shThemeDefault.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shThemeDjango.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shThemeEclipse.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shThemeEmacs.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shThemeFadeToGrey.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shThemeMDUltra.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shThemeMidnight.css" />
+    <Content Include="Content\Default\SyntaxHighlighter\shThemeRDark.css" />
+    <Content Include="fonts\Default\fontawesome-webfont.svg" />
+    <Content Include="fonts\Default\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\Default\bootstrap.js" />
+    <Content Include="Scripts\Default\bootstrap.min.js" />
+    <Content Include="Scripts\Default\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\Default\jquery-1.9.1.js" />
+    <Content Include="Scripts\Default\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shAutoloader.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushAppleScript.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushAS3.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushBash.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushColdFusion.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushCpp.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushCSharp.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushCss.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushDelphi.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushDiff.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushErlang.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushGroovy.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushJava.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushJavaFX.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushJScript.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushPerl.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushPhp.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushPlain.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushPowerShell.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushPython.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushRuby.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushSass.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushScala.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushSql.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushVb.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shBrushXml.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shCore.js" />
+    <Content Include="Scripts\Default\SyntaxHighlighter\shLegacy.js" />
+    <Content Include="Views\ReSP\code-completion\_img\bulk-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\bulk-300x69.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\bulk.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\bulk_inspection-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\bulk_inspection-300x227.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\bulk_inspection.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\CommandUIDefinitionLocation-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\CommandUIDefinitionLocation-300x141.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\CommandUIDefinitionLocation.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\ContentPlaceHolderId-150x150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\ContentPlaceHolderId-300x133.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\ContentPlaceHolderId.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\ContentTypeBindingContentTypeId-150x150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\ContentTypeBindingContentTypeId-300x93.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\ContentTypeBindingContentTypeId.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\ContentTypeBindingListUrl-150x150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\ContentTypeBindingListUrl-300x106.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\ContentTypeBindingListUrl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\controlsrc-150x150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\controlsrc-300x118.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\controlsrc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\CustomActionLocation-150x150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\CustomActionLocation-300x157.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\CustomActionLocation.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\CustomActionRegistrationType-150x150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\CustomActionRegistrationType-300x153.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\CustomActionRegistrationType.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\customaction_registrationtype-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\customaction_registrationtype-300x196.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\customaction_registrationtype.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\customaction_rights-150x150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\customaction_rights-300x185.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\customaction_rights.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\disable_rule-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\disable_rule-300x263.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\disable_rule.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\featureid-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\featureid-300x141.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\featureid.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FeatureSiteTemplateAssociationFeatureId-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FeatureSiteTemplateAssociationFeatureId-300x118.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FeatureSiteTemplateAssociationFeatureId.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FeatureSiteTemplateAssociationTemplateName-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FeatureSiteTemplateAssociationTemplateName-300x118.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FeatureSiteTemplateAssociationTemplateName.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\fieldgroup-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\fieldgroup-300x110.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\fieldgroup.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\fieldref-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\fieldref-300x151.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\fieldref.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\fieldtype-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\fieldtype-300x154.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\fieldtype.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FileContentType-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FileContentType-300x122.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FileContentType.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FilePublishingAssociatedContentType-1024x281.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FilePublishingAssociatedContentType-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FilePublishingAssociatedContentType-300x82.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FilePublishingAssociatedContentType.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FilePublishingPageLayout-1024x281.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FilePublishingPageLayout-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FilePublishingPageLayout-300x82.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\FilePublishingPageLayout.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\getting-started-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\getting-started-300x168.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\getting-started.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\get_help-150x149.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\get_help-300x67.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\get_help.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\listurl-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\listurl-300x144.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\listurl.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\nsite-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\nsite-300x168.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\nsite.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\nsw-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\nsw-300x168.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\nsw.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\nweb-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\nweb-300x168.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\nweb.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\rwep-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\rwep-300x119.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\rwep.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\settings-150x150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\settings-300x186.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\sp-working-150x150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\sp-working-300x123.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\sp-working.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\sp-working1-150x57.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\sp-working1-300x34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\sp-working1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\SPCAF_FB.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\SPItemEventProperties-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\SPItemEventProperties-300x211.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\SPItemEventProperties.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\SPWebCollectionAdd1-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\SPWebCollectionAdd1-300x140.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\SPWebCollectionAdd1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\templatetype-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\templatetype-300x153.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\templatetype.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\UseBuiltInFieldsInsteadOfStrings-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\UseBuiltInFieldsInsteadOfStrings-300x122.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\UseBuiltInFieldsInsteadOfStrings.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\UserProfilePropertyName-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\UserProfilePropertyName-300x160.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\UserProfilePropertyName.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\webpartgroup-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\webpartgroup-300x194.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\webpartgroup.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\webparttitle-150x150.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\webparttitle-300x97.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\code-completion\_img\webparttitle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ReSP\getting-started\_img\bulk_inspection-150x150.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\bulk_inspection-300x227.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\bulk_inspection.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\disable_rule-150x150.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\disable_rule-300x263.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\disable_rule.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\getting-started-150x150.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\getting-started-300x168.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\getting-started.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\getting.gif" />
+    <Content Include="Views\ReSP\getting-started\_img\get_help-150x149.png" />
+    <Content Include="Views\ReSP\getting-started\_img\get_help-300x67.png" />
+    <Content Include="Views\ReSP\getting-started\_img\get_help.png" />
+    <Content Include="Views\ReSP\getting-started\_img\settings-150x150.png" />
+    <Content Include="Views\ReSP\getting-started\_img\settings-300x186.png" />
+    <Content Include="Views\ReSP\getting-started\_img\settings.png" />
+    <Content Include="Views\ReSP\Inspections\aspnet\SPDataSourceScopeDoesNotDefinedInPage.xml" />
+    <Content Include="Views\ReSP\Inspections\csharp\AvoidJQueryDocumentReadyInCode.html" />
+    <Content Include="Views\ReSP\Inspections\javascript\AvoidJQueryDocumentReady.html" />
+    <Content Include="Views\ReSP\Inspections\xml\AvoidCommentsForContentType.xml" />
+    <Content Include="Views\ReSP\Inspections\xml\AvoidListContentTypes.xml" />
+    <Content Include="Views\ReSP\Inspections\xml\DeclareEmptyFieldsElement.xml" />
+    <Content Include="Views\ReSP\Inspections\xml\DoNotIndexNoteField.xml" />
+    <Content Include="Views\ReSP\Inspections\xml\MixedIDInFieldName.xml" />
+    <Content Include="Views\ReSP\Inspections\xml\WebPartDefinitionMightBeImproved.xml" />
+    <Content Include="Views\ReSP\live-templates\_img\nsite-150x150.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\nsite-300x168.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\nsite.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\nsw-150x150.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\nsw-300x168.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\nsw.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\nweb-150x150.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\nweb-300x168.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\nweb.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\rwep-150x150.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\rwep-300x119.gif" />
+    <Content Include="Views\ReSP\live-templates\_img\rwep.gif" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.DocumentManagement.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Publishing.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Runtime.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Search.Applications.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Search.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.ServerRuntime.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.Taxonomy.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.UserProfiles.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\CSOM\Microsoft.SharePoint.Client.WorkflowServices.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.BusinessData.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.IdentityModel.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.IdentityModel.WindowsTokenService.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.DocumentManagement.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.SecureStoreService.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.Search.Applications.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.Search.Connector.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.Search.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.Search.ExchangeAdapter.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.Office.Server.UserProfiles.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Linq.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Portal.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Publishing.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Search.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Search.Extended.Administration.Common.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Search.Extended.Administration.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Search.Extended.Administration.ResourceStorage.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Security.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Taxonomy.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.Taxonomy.Intl.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\microsoft.sharepoint.WorkflowActions.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.WorkflowServices.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.WorkflowServicesBase.dll" />
+    <Content Include="_Dependencies\SP2013 - 15.0.4569.1000\SSOM\Microsoft.SharePoint.WorkManagement.Client.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

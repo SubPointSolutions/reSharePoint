@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-16"?>
+<DocSample xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsMethod>true</IsMethod>
+  <IsClass>false</IsClass>
+  <Tags />
+  <MethodBodyWithFunction>
+        public void AppropriateSPListItemSPFileUsage(SPListItem item)
+        {
+            var file = item.Web.GetFile(item.UniqueId);
+        }</MethodBodyWithFunction>
+  <MethodBody>var file = item.Web.GetFile(item.UniqueId);
+
+</MethodBody>
+  <Language>cs</Language>
+  <Namespace>ReSharePoint.Docs.Basic.Inspection.Code</Namespace>
+  <ClassName>AvoidUsingSPListItemFile</ClassName>
+  <MethodName>AppropriateSPListItemSPFileUsage</MethodName>
+  <ClassComment />
+  <MethodFullName>ReSharePoint.Docs.Basic.Inspection.Code.AvoidUsingSPListItemFile.AppropriateSPListItemSPFileUsage</MethodFullName>
+  <ClassFullName>ReSharePoint.Docs.Basic.Inspection.Code.AvoidUsingSPListItemFile</ClassFullName>
+  <MethodParametersCount>1</MethodParametersCount>
+  <SourceFileName>AvoidUsingSPListItemFile.cs</SourceFileName>
+  <SourceFileNameWithoutExtension>AvoidUsingSPListItemFile</SourceFileNameWithoutExtension>
+  <SourceFileFolder>E:\_sps_git\reSharePoint\reSharePoint\SubPointSolutions.Docs\Views\ReSP\Inspections\csharp</SourceFileFolder>
+  <SourceFilePath>E:\_sps_git\reSharePoint\reSharePoint\SubPointSolutions.Docs\Views\ReSP\Inspections\csharp\AvoidUsingSPListItemFile.cs</SourceFilePath>
+</DocSample>

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubPointSolutions.Docs", "SubPointSolutions.Docs\SubPointSolutions.Docs.csproj", "{E4CAA07E-38A2-42AA-A8F3-164C5551E7A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_3rd party", "_3rd party", "{6B5551CE-1045-4B8B-B042-A5AF76D461C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build", "Build\Build.csproj", "{1C28F3CD-21F9-4DD5-99BE-CD8BED02E53D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4CAA07E-38A2-42AA-A8F3-164C5551E7A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CAA07E-38A2-42AA-A8F3-164C5551E7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4CAA07E-38A2-42AA-A8F3-164C5551E7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4CAA07E-38A2-42AA-A8F3-164C5551E7A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C28F3CD-21F9-4DD5-99BE-CD8BED02E53D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C28F3CD-21F9-4DD5-99BE-CD8BED02E53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C28F3CD-21F9-4DD5-99BE-CD8BED02E53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C28F3CD-21F9-4DD5-99BE-CD8BED02E53D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C28F3CD-21F9-4DD5-99BE-CD8BED02E53D} = {6B5551CE-1045-4B8B-B042-A5AF76D461C4}
+	EndGlobalSection
+EndGlobal

@@ -18,7 +18,7 @@
 
   ],
   "defaultTestAssemblyPaths": [
-
+    "SubPointSolutions.Docs/bin/Debug/SubPointSolutions.Docs.dll"
   ],
   "defaultBuildDirs": [ ],
   "defaultEnvironmentVariables": [ ]
