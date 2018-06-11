@@ -12,8 +12,8 @@ List name is culture specific string or could be changed later:
 Potential performance issues:
 
 - Avoid all list enumerations via enumerator calls.
-- Avoid all list enumerations via linq Cast<T> expression.
-- Avoid all list enumerations via linq OfType<T> expression.
+- Avoid all list enumerations via linq Cast`<T`> expression.
+- Avoid all list enumerations via linq OfType`<T`> expression.
 
 Inappropriate usage:
 

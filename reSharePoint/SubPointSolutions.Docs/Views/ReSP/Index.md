@@ -33,4 +33,6 @@ You can enable/disable reSP features in the ReSharper Product & Features dialog.
    * Console application
 
 
-> In July 2013, JetBrains has launched a free [command line](https://www.jetbrains.com/resharper/features/command-line.html) version of ReSharper. It's compatible with ReSharper's plugins (can load them from the gallery). You can use it for CI purpose.
+::: tip 
+In July 2013, JetBrains has launched a free [command line](https://www.jetbrains.com/resharper/features/command-line.html) version of ReSharper. It's compatible with ReSharper's plugins (can load them from the gallery). You can use it for CI purpose.
+:::
