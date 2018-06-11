@@ -46,7 +46,7 @@ module.exports = {
                 title: 'Code Completion',
                 collapsable: true,
                 children: [
-                  'code-completion'
+                  '/code-completion/'
                 ]
             },
 
@@ -54,7 +54,7 @@ module.exports = {
                 title: 'Live Templates',
                 collapsable: true,
                 children: [
-                  'live-templates'
+                  '/live-templates/'
                 ]
             },
             
